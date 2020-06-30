@@ -71,7 +71,7 @@ class DDNN(nn.Module):
             ResLayer(cloud_input_channels, 64),
             ResLayer(64, 64),
             ResLayer(64, 128),
-            nn.AvgPool2d(2, 2),
+            nn.AvgPool2d(2, 2, divisor_override=None),
             ResLayer(128, 128),
             ResLayer(128, 128),
         )
